@@ -1717,6 +1717,7 @@ MATCH_RECOGNIZE (
 
     def test_show_tables(self):
         self.validate_identity(
+            "SHOW TABLES LIKE 'some_table' IN SCHEMA public",
             "SHOW TABLES LIKE 'line%' IN tpch.public",
             "SHOW TABLES LIKE 'line%' IN SCHEMA tpch.public",
         )
